@@ -23,13 +23,14 @@
 **4. Https抓包**<br>
 * 简单https抓包： 完成以上的配置，只能抓取简单的http请求<br>
 * 若想抓取https请求，需要进行以下设置：<br>
-1) 勾选"Capture Https connects"、"decrypt https traffic", <br>
-2) 若监听的程序访问的https站点使用的是不可信的证书，则勾选"Ignore server certificate errors"
+1) 勾选**"Capture Https connects"、"decrypt https traffic"** <br>
+2) 若监听的程序访问的https站点使用的是不可信的证书，则勾选**"Ignore server certificate errors"**<br>
 以上步骤完成后可以抓取简单的https请求
-2. 过证书验证：某些app对https证书进行验证，还需要将Fiddler代理服务器的证书导到Android设置上才能进行抓包
-    操作步骤：1） 打开浏览器，输入代理IP+端口
-                     2） 点击页面 “FiddlerRootcertificate” 链接
-                     3） 在弹框页面中，输入一个证书名称，点击 “确定” 即可
+* 过证书验证：某些app对https证书进行验证，还需要将Fiddler代理服务器的证书导到Android设置上才能进行抓包<br>
+操作步骤：<br>
+1) 打开浏览器，输入代理IP+端口<br>
+2) 点击页面 “FiddlerRootcertificate” 链接<br>
+3) 在弹框页面中，输入一个证书名称，点击 “确定” 即可<br>
 以上步骤完成后，可以抓取大部分https请求
 3. 使其在httpURLConnection下正常抓包：点击Rules-Customize Rules在OnBeforeResponse后面添加以下的语句即可。
      static function OnBeforeResponse(oSession: Session) {
