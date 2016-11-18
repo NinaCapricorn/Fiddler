@@ -49,8 +49,8 @@
 * 完成以上设置就可以抓取http及https请求，但是抓到包还不够，更多的是需要对requestURL进行修改或者修改response包<br>
 * 设置断点，筛选出相应需要修改数据的http请求；<br>
 * 断点设置的方式很多，以bpu 命令为例：<br>
-例如，1. 在底部的输入框中输入bpu api.impingo.me, 断点拦截所有域名为api.impingo.me的http请求 <br>
-     2. 若直接输入bpu，不带任何参数则会清空设置了断点的http请求 <br>
+  例如， 1). 在底部的输入框中输入bpu api.impingo.me, 断点拦截所有域名为api.impingo.me的http请求 <br>
+        2). 若直接输入bpu，不带任何参数则会清空设置了断点的http请求 <br>
 Composer
 右侧选项卡中composer，可以模拟post、get的http请求
 Replay
