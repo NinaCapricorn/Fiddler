@@ -5,17 +5,20 @@
      3) Fiddler将自己设置为一个代理服务器，默认监听 127.0.0.1:8888，同时将浏览器的http、https协议设置为使用代理服务器; <br>
 ****
 **2. 安装** ：下载安装包，按照步骤一步一步进行就ok <br>
-          Fiddler整体包括这几个部分：
-1）工具栏
-2）监听开关 capturing
-3）监听类型
-4）命令行
-5）请求列表
-6）请求相关信息
-抓包：1）设置 Tools-Fiddler Options-Connections，设置端口号为8888，勾选 “Allow romote computers to connect”；
-           2）在本机中输入ipconfig确定本机的ip地址；
-           3）打开Andorid/IOS在设置-WLAN中找到“修改网络”选项，“代理”选择“手动”、"代理服务器主机名"中输入步骤2中的ip地址、"代理服务器端口”设置为"8888"；
-此时，启动手机app就可以开始抓包，以上设置完成后只能进行简单的http抓包。
+     Fiddler整体包括这几个部分：<br>
+     1）工具栏<br>
+     2）监听开关 capturing<br>
+     3）监听类型<br>
+     4）命令行<br>
+     5）请求列表<br>
+     6）请求相关信息<br>
+****     
+**3. 抓包** <br>
+     1）设置 Tools-Fiddler Options-Connections，设置端口号为8888，勾选 “Allow romote computers to connect”;<br>
+     2）在本机中输入ipconfig确定本机的ip地址;<br>
+     3）打开Andorid/IOS在设置-WLAN中找到“修改网络”选项，“代理”选择“手动”、"代理服务器主机名"中输入步骤2中的ip地址、"代理服务器端口”设置为"8888"
+     此时，启动手机app就可以开始抓包，以上设置完成后只能进行简单的http抓包
+****
 
 Https抓包
 1.简单https抓包： 完成以上的配置，只能抓取简单的http请求，若想抓取https请求，需要进行以下设置：
