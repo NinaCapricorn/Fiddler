@@ -22,8 +22,9 @@
 
 **4. Https抓包**<br>
 * 简单https抓包： 完成以上的配置，只能抓取简单的http请求<br>
-* 若想抓取https请求，需要进行以下设置：
-勾选"Capture Https connects",勾选"decrypt https traffic", 若监听的程序访问的https站点使用的是不可信的证书，则勾选"Ignore server certificate errors"
+* 若想抓取https请求，需要进行以下设置：<br>
+1) 勾选"Capture Https connects"、"decrypt https traffic", <br>
+2) 若监听的程序访问的https站点使用的是不可信的证书，则勾选"Ignore server certificate errors"
 以上步骤完成后可以抓取简单的https请求
 2. 过证书验证：某些app对https证书进行验证，还需要将Fiddler代理服务器的证书导到Android设置上才能进行抓包
     操作步骤：1） 打开浏览器，输入代理IP+端口
