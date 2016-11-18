@@ -1,8 +1,8 @@
 # Fiddler
 **1. 抓包工具**<br>
-     1) Fiddler是一个http协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点，查看Fiddler拦截到的数据; <br>
-     2) 原理：本机开启了一个http代理服务器，转发所有的http请求和响应; <br>
-     3) Fiddler将自己设置为一个代理服务器，默认监听 127.0.0.1:8888，同时将浏览器的http、https协议设置为使用代理服务器; <br>
+     >1) Fiddler是一个http协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点，查看Fiddler拦截到的数据; <br>
+     >2) 原理：本机开启了一个http代理服务器，转发所有的http请求和响应; <br>
+     >3) Fiddler将自己设置为一个代理服务器，默认监听 127.0.0.1:8888，同时将浏览器的http、https协议设置为使用代理服务器; <br>
 ****
 **2. 安装** ：下载安装包，按照步骤一步一步进行就ok <br>
      Fiddler整体包括这几个部分：<br>
@@ -33,7 +33,7 @@
 3) 在弹框页面中，输入一个证书名称，点击 “确定” 即可<br>
 以上步骤完成后，可以抓取大部分https请求<br>
 * 使其在httpURLConnection下正常抓包：点击Rules-Customize Rules在OnBeforeResponse后面添加以下的语句即可。<br>
-    ```js 
+    ```javascript
      static function OnBeforeResponse(oSession: Session) {
         if (m_Hide304s && oSession.responseCode == 304) {
             oSession["ui-hide"] = "true";
