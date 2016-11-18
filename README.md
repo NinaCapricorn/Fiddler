@@ -33,7 +33,7 @@
 3) 在弹框页面中，输入一个证书名称，点击 “确定” 即可<br>
 以上步骤完成后，可以抓取大部分https请求<br>
 * 使其在httpURLConnection下正常抓包：点击Rules-Customize Rules在OnBeforeResponse后面添加以下的语句即可。<br>
-    '''js 
+    ```js 
      static function OnBeforeResponse(oSession: Session) {
         if (m_Hide304s && oSession.responseCode == 304) {
             oSession["ui-hide"] = "true";
@@ -41,7 +41,7 @@
        if (oSession.oRequest["User-Agent"].indexOf("Android")> -1 && oSession.HTTPMethodIs("CONNECT")) {
            oSession.oResponse.headers["Connection"] = "Keep-Alive"; }
     } 
-    '''
+    ```
     <br>
 以上步骤设置完成后，基本可以完成所有相关https的抓包
 
