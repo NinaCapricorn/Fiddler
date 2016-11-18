@@ -42,7 +42,7 @@
            oSession.oResponse.headers["Connection"] = "Keep-Alive"; }
     } 
     <br>
-以上步骤设置完成后，基本可以完成所有相关https的抓包
+以上步骤设置完成后，基本可以完成所有相关https的抓包<br>
 ****
 **5. 断点设置**<br>
 * 完成以上设置就可以抓取http及https请求，但是抓到包还不够，更多的是需要对requestURL进行修改或者修改response包<br>
