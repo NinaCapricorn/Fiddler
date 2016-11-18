@@ -1,13 +1,8 @@
 # Fiddler
 **1. 抓包工具**<br>
->数据结构
->>树
->>>二叉树
->>>>平衡二叉树
->>>>>满二叉树
-     >>1) Fiddler是一个http协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点，查看Fiddler拦截到的数据; <br>
-     >>2) 原理：本机开启了一个http代理服务器，转发所有的http请求和响应; <br>
-     >>3) Fiddler将自己设置为一个代理服务器，默认监听 127.0.0.1:8888，同时将浏览器的http、https协议设置为使用代理服务器; <br>
+     1) Fiddler是一个http协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点，查看Fiddler拦截到的数据; <br>
+     2) 原理：本机开启了一个http代理服务器，转发所有的http请求和响应; <br>
+     3) Fiddler将自己设置为一个代理服务器，默认监听 127.0.0.1:8888，同时将浏览器的http、https协议设置为使用代理服务器; <br>
 ****
 **2. 安装** ：下载安装包，按照步骤一步一步进行就ok <br>
      Fiddler整体包括这几个部分：<br>
@@ -38,7 +33,7 @@
 3) 在弹框页面中，输入一个证书名称，点击 “确定” 即可<br>
 以上步骤完成后，可以抓取大部分https请求<br>
 * 使其在httpURLConnection下正常抓包：点击Rules-Customize Rules在OnBeforeResponse后面添加以下的语句即可。<br>
-    ```javascript
+    ```js
      static function OnBeforeResponse(oSession: Session) {
         if (m_Hide304s && oSession.responseCode == 304) {
             oSession["ui-hide"] = "true";
@@ -46,15 +41,15 @@
        if (oSession.oRequest["User-Agent"].indexOf("Android")> -1 && oSession.HTTPMethodIs("CONNECT")) {
            oSession.oResponse.headers["Connection"] = "Keep-Alive"; }
     } 
-    ```
     <br>
 以上步骤设置完成后，基本可以完成所有相关https的抓包
-
-断点设置
-完成以上设置就可以抓取http及https请求，但是抓到包还不够，更多的是需要对requestURL进行修改或者修改response包
-设置断点，筛选出相应需要修改数据的http请求；
-断点设置的方式很多，以bpu 命令为例：例如，在底部的输入框中输入bpu api.impingo.me, 断点拦截所有域名为api.impingo.me的http请求；
-                                   若直接输入bpu，不带任何参数则会清空设置了断点的http请求
+****
+**5. 断点设置**<br>
+* 完成以上设置就可以抓取http及https请求，但是抓到包还不够，更多的是需要对requestURL进行修改或者修改response包<br>
+* 设置断点，筛选出相应需要修改数据的http请求；<br>
+* 断点设置的方式很多，以bpu 命令为例：<br>
+例如，* 在底部的输入框中输入bpu api.impingo.me, 断点拦截所有域名为api.impingo.me的http请求 <br>
+      * 若直接输入bpu，不带任何参数则会清空设置了断点的http请求 <br>
 Composer
 右侧选项卡中composer，可以模拟post、get的http请求
 Replay
