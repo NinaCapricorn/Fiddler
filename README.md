@@ -51,14 +51,22 @@
 * 断点设置的方式很多，以bpu 命令为例：例如，<br> 
 1) 在底部的输入框中输入bpu api.impingo.me, 断点拦截所有域名为api.impingo.me的http请求 <br>
 2) 若直接输入bpu，不带任何参数则会清空设置了断点的http请求 <br>
-Composer
-右侧选项卡中composer，可以模拟post、get的http请求
-Replay
-1) 选中请求列表中http请求，单击replay按钮就可试下回放；
-2) 按着Shift+Replay，可以输入重放次数（Hold SHIFT to Reissue multiple times）；
-3) 按着CTRL+Replay，可以无条件的重放（Hold CTRL to Reissue unconditionally）;
-Hosts
-fiddler中也支持host修改，路径tools-hosts
-Filters
-监控列表中出现的http请求会存在很多无关的请求，此时需要过滤
-怎样设置过滤规则，需要使用正则表达式
+****
+
+**6. Composer**<br>
+右侧选项卡中composer，可以模拟post、get的http请求<br>
+****
+
+**7. Replay**<br>
+1) 选中请求列表中http请求，单击replay按钮就可试下回放；<br>
+2) 按着Shift+Replay，可以输入重放次数（Hold SHIFT to Reissue multiple times）；<br>
+3) 按着CTRL+Replay，可以无条件的重放（Hold CTRL to Reissue unconditionally）;<br>
+****
+
+**8. Hosts**<br>
+fiddler中也支持host修改，路径tools-hosts<br>
+****
+
+**9. Filters**<br>
+监控列表中出现的http请求会存在很多无关的请求，此时需要过滤<br>
+怎样设置过滤规则，需要使用正则表达式<br>
